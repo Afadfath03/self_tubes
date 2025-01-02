@@ -151,7 +151,7 @@ class _GamePageState extends State<GamePage> {
           TextButton(
             child: const Text('Main Lagi'),
             onPressed: () {
-              Navigator.of(context).pop(); // Menutup dialog
+              Navigator.of(context).pop();
               _saveScore().then((_) {
                 setState(() {
                   gameLogic.resetGame();
@@ -165,7 +165,7 @@ class _GamePageState extends State<GamePage> {
             onPressed: () {
               Navigator.of(context).pop();
               _saveScore().then((_) {
-                SystemNavigator.pop(); // Keluar dari aplikasi
+                SystemNavigator.pop();
               });
             },
           ),
@@ -181,9 +181,8 @@ class _GamePageState extends State<GamePage> {
     );
   }
 
-  // Fungsi untuk tombol menyerah
   void _giveUp() {
-    _showGameOverDialog(); // Tampilkan game over langsung
+    _showGameOverDialog();
   }
 
   @override

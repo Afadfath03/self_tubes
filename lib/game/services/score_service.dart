@@ -49,7 +49,6 @@ class ScoreService {
 
   Future<List<dynamic>> fetchTopScores() async {
     try {
-      // Mengambil dokumen dengan skor tertinggi
       QuerySnapshot snapshot = await FirebaseFirestore.instance
           .collection(ScoreService.collectionName)
           .orderBy('score', descending: true)
